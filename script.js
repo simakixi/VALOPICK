@@ -5,7 +5,7 @@ let con = document.createElement('img');
 let cen = document.createElement('img');
 due.src = "img/due.png";
 ini.src = "img/ini.png";
-con.src = "img/con.png";
+con.src = "img/cont.png";
 cen.src = "img/cen.png";
 
 img = [due,ini,con,cen];
@@ -14,6 +14,10 @@ rollflag = true;
 
 let Character = [];
 
+let allnumber = [];
+for(let i=1;i<=25;i++){
+    allnumber[i-1] = i;
+}
 let dueroll = [2,7,11,12,14,18,23];
 let iniroll = [4,9,13,16,19,21];
 let conroll = [1,5,10,15,20,24];
@@ -338,4 +342,52 @@ function shuffleAG(){
             [cenAG[index1], cenAG[index2]] = [cenAG[index2], cenAG[index1]];
         }
     }
+}
+
+let flag2 = true;
+let allcnt;
+function Randomall(){
+    if(flag2){
+        flag2=false;
+        allcnt = 0;
+        shuffleAll();
+        RandomFOR("R1",25);
+        RandomFOR("R2",27);
+        RandomFOR("R3",29);
+        RandomFOR("R4",31);
+        RandomFOR("R5",33);
+    }
+}
+
+function shuffleAll(){
+    for(let i=0;i<500;i++){
+        let index1 = Math.floor(Math.random() * 25);
+        let index2 = Math.floor(Math.random() * 25);
+        if (index1 !== index2) {
+            [allnumber[index1], allnumber[index2]] = [allnumber[index2], allnumber[index1]];
+        }
+    }
+}
+async function RandomFOR(cell,k){
+    let randomM = -1;
+    let randomN = -1;
+    for (let i = 0; i < k; i++) {
+        await sleep(200);
+        do {
+            randomN = Math.floor(Math.random() * 25)+1;
+        } while (randomN === randomM);
+        randomM = randomN;
+        const container = document.getElementById(cell);
+        const Element = container.querySelector('img');
+        if (Element) {
+            Element.src = Character[randomN].src;
+        } else {
+            const newElement = document.createElement('img');
+            newElement.src = Character[randomN].src;
+            container.appendChild(newElement);
+        }
+    }
+    allcnt++;
+    document.getElementById(cell).querySelector('img').src = Character[allnumber[allcnt-1]].src;
+    flag2 = true;
 }

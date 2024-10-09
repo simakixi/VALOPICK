@@ -7,7 +7,7 @@ body{
     flex-direction: column;
 }
 
-#T1,#T2,#T3,#T4,#T5,#P1,#P2,#P3,#P4,#P5{
+#T1,#T2,#T3,#T4,#T5,#P1,#P2,#P3,#P4,#P5,#R1,#R2,#R3,#R4,#R5{
     width: 250px;
     height: 250px;
     padding:10px;
@@ -126,4 +126,11 @@ h3{
     font-size: 32px;
     font-weight: bold;
     margin-bottom: -10px;
+}
+
+h2{
+    font-size: 48px;
+    font-weight: bold;
+    color:white;
+    margin-bottom: -30px;
 }
