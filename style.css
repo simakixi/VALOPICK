@@ -1,0 +1,88 @@
+body{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    flex-direction: column;
+}
+
+#T1,#T2,#T3,#T4,#T5,#P1,#P2,#P3,#P4,#P5{
+    width: 250px;
+    height: 250px;
+    padding:10px;
+}
+
+td{
+    border:2px solid white;
+    text-align: center;
+}
+
+.name{
+    height:100px;
+}
+
+table{
+    margin-top: 5%;
+    border-collapse: collapse;
+}
+
+select{
+    font-size: 32px;
+    font-family: 'Arial Rounded', 'Comfortaa', 'Baloo', sans-serif;
+    font-weight: bold;
+}
+
+option{
+    text-align: center;
+    font-family: 'Arial Rounded', 'Comfortaa', 'Baloo', sans-serif;
+}
+
+select{
+    background-color: black;
+    color:white;
+    outline: none;
+    appearance: none;
+    border: none;
+}
+
+h1{
+    font-size: 60px;
+    font-weight: bold;
+    color:white;
+    margin-bottom: -3%;
+}
+
+.pick{
+    font-size: 48px;
+}
+
+.btn{
+    margin-top: 5%;
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1.5;
+    position: relative;
+    display: inline-block;
+    padding: 1rem 4rem;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+    letter-spacing: 0.1em;
+    color: black;
+    border-radius: 0.5rem;
+    background-color: white;
+    position:center;
+}
+
+.btn:hover{
+    background-color: red;
+    color:black;
+}
