@@ -7,6 +7,54 @@
     </head>
     <body>
         <h1>【RANDOM ROLL】</h1>
+        <p class="text">人数合計が５になるようにしてください・全て０で完全ランダム</p>
+        <div id="rollamount">
+            <div class="center">
+                <h3>デュエリスト</h3>
+                <select id="ROLL1" class="wide">
+                    <option value="0">０</option>
+                    <option value="1">１</option>
+                    <option value="2">２</option>
+                    <option value="3">３</option>
+                    <option value="4">４</option>
+                    <option value="5">５</option>
+                </select>
+            </div>
+            <div class="center">
+                <h3>イニシエーター</h3>
+                <select id="ROLL2" class="wide">
+                    <option value="0">０</option>
+                    <option value="1">１</option>
+                    <option value="2">２</option>
+                    <option value="3">３</option>
+                    <option value="4">４</option>
+                    <option value="5">５</option>
+                </select>
+            </div>
+            <div class="center">
+                <h3>コントローラー</h3>
+                <select id="ROLL3" class="wide">
+                    <option value="0">０</option>
+                    <option value="1">１</option>
+                    <option value="2">２</option>
+                    <option value="3">３</option>
+                    <option value="4">４</option>
+                    <option value="5">５</option>
+                </select>
+            </div>
+            <div class="center">
+                <h3>センチネル</h3>
+                <select id="ROLL4" class="wide">
+                    <option value="0">０</option>
+                    <option value="1">１</option>
+                    <option value="2">２</option>
+                    <option value="3">３</option>
+                    <option value="4">４</option>
+                    <option value="5">５</option>
+                </select>
+            </div>
+        </div>
+        <p id="error" class="hidden">!!!人数が不正です!!!</p>
         <div class="table">
             <table>
                 <tr>
@@ -97,6 +145,20 @@
         </div>
         <div style="text-align: center;">
             <a class="pick btn" onclick="random()">ランダムピック</a>
+        </div>
+        <h1>エージェントもランダムにする</h1>
+        <h1>⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩</h1>
+        <table>
+            <tr>
+                <td id="P1"></td>
+                <td id="P2"></td>
+                <td id="P3"></td>
+                <td id="P4"></td>
+                <td id="P5"></td>
+            </tr>
+        </table>
+        <div style="text-align: center;">
+            <a class="pick btn" onclick="randomparty()">ランダムピック</a>
         </div>
     </body>
     <script src="script.js"></script>
